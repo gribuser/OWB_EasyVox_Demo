@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.25",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "OWB_EasyVox_Demo",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EasyVoxelsMC",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/65b3c5917fed4252a44e66fe8af045a0"
+		},
+		{
+			"Name": "OpenWorldBakery",
+			"Enabled": true
+		},
+		{
+			"Name": "OWBEasyVoxel",
+			"Enabled": true
+		}
+	]
+}
