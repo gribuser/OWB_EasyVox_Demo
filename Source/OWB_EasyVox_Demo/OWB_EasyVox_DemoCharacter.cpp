@@ -59,6 +59,7 @@ void AOWB_EasyVox_DemoCharacter::SetupPlayerInputComponent(class UInputComponent
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AOWB_EasyVox_DemoCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AOWB_EasyVox_DemoCharacter::MoveRight);
+	PlayerInputComponent->BindAxis("MoveUp", this, &AOWB_EasyVox_DemoCharacter::MoveUp);
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
@@ -128,6 +129,22 @@ void AOWB_EasyVox_DemoCharacter::MoveRight(float Value)
 	
 		// get right vector 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		// add movement in that direction
+		AddMovementInput(Direction, Value);
+	}
+}
+
+
+void AOWB_EasyVox_DemoCharacter::MoveUp(float Value)
+{
+	if ((Controller != NULL) && (Value != 0.0f))
+	{
+		// find out which way is right
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+		// get right vector 
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Z);
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
