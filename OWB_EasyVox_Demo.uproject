@@ -18,7 +18,8 @@
 		},
 		{
 			"Name": "OpenWorldBakery",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/48c207649ff942bfbb458d7dbc1735d7"
 		},
 		{
 			"Name": "OWBEasyVoxel",
