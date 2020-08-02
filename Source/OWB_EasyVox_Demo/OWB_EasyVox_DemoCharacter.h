@@ -1,4 +1,5 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Open World Bakery free additions
+// Copyright 2020 Dmitry Grivov, g@primitive.game, all rights reserved
 
 #pragma once
 
